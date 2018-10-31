@@ -25,6 +25,9 @@ docker container stop agitated_turing
 # Copy file from Docker container to source VM
 sudo docker cp agitated_turing:/root /home/kthacker
 
+# Copy file inside container
+cp -r DataSciPy/ ~/Deep_Learning_AWS/
+
 # Delete file
 outside of docker: sudo docker rm -r agitated_turing:/root/DataSciPy
 inside of docker: rm -r DataSciPy
