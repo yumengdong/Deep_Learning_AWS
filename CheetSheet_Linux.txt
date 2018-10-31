@@ -1,0 +1,34 @@
+docker run -itd -p 8888:8888 -p 6006:6006  kla-tencor:hackathon2019local /bin/bash
+
+docker ps
+
+docker ps -a
+
+docker exec -it agitated_turing /bin/bash
+
+docker container start agitated_turing
+
+# jupyter Notebook
+jupyter notebook --allow-root --ip=0.0.0.0
+127.0.0.1
+
+# To start container
+docker container start agitated_turing
+docker ps -a
+docker exec -it agitated_turing /bin/bash
+
+# To stop container
+exit()
+exit
+docker container stop agitated_turing
+
+# Copy file from Docker container to source VM
+sudo docker cp agitated_turing:/root /home/kthacker
+
+# Delete file
+outside of docker: sudo docker rm -r agitated_turing:/root/DataSciPy
+inside of docker: rm -r DataSciPy
+
+short key: ctrl+shift+c/v
+
+
