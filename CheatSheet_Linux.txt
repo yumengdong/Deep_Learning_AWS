@@ -17,6 +17,12 @@ docker container start agitated_turing
 docker ps -a
 docker exec -it agitated_turing /bin/bash
 
+# For AWS, create a docker 
+sudo docker run --runtime=nvidia -itd -p 8888:8888 -p 6006:6006 kla-tencor:hackathon2019 /bin/bash
+sudo docker container start relaxed_archimedes
+sudo docker exec -it relaxed_archimedes /bin/bash
+sudo docker container stop relaxed_archimedes
+
 # To stop container
 exit()
 exit
